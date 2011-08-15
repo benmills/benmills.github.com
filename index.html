@@ -1,1 +1,137 @@
-Hello world
+<html>
+  <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js" type="text/javascript"></script>
+    <script src="jquery.backgroundPosition.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(function () {
+        var open = false;
+        var iframe, iframeHolder;
+
+        $('#projects a').click(function (e) {
+          e.preventDefault();
+          var link = $(this);
+
+          if (iframe) {
+            iframe.attr('src', $(this).attr('href'));
+          } else {
+            $('body').append("<div id='remoteHolder'></div>");
+            iframeHolder = $('#remoteHolder');
+
+            iframeHolder.css({
+              'position': 'fixed',
+              'top': '0px',
+              'left': $(window).width()+'px',
+              'height': $(window).height()+"px",
+              'width': $(window).width()-500+"px",
+              'background': '#FFF'
+            }); 
+
+            iframeHolder.animate({
+              left: '500px'
+            }, 500, function () {
+              iframeHolder.append("<iframe src='"+link.attr('href')+"' id='remote'></iframe>");
+              iframe = $("#remote");
+              iframe.css({
+                'height': $(window).height()+"px",
+                'width': $(window).width()-500+"px",
+                'background': '#FFF'
+              }); 
+            });
+
+            $('body').animate({
+              backgroundPosition: '-220px 0px',
+              paddingLeft: '70px'
+            }, 500);
+          }
+        });
+      });
+    </script>
+    <style>
+      body {
+        background: url(bg.png) repeat-y #171717;
+        color: #e2e2e2;
+        margin: 0;
+        padding: 20px 0 0 290px;
+        font-family: Helvetica Neue;
+        text-shadow: 1px 1px 1px #000;
+      }
+      
+      h1, h2 {
+        font-weight: normal;
+        font-size: 22px;
+      }
+
+      p, li {
+        color: #808080;
+        font-size: 14px;
+      }
+
+      p, li {
+        color: #808080;
+        font-size: 14px;
+      }
+
+      ul {
+        margin: 0; padding: 0;
+        list-style: none;
+      }
+
+      iframe {
+        border: none;
+        position: fixed;
+      }
+
+      h1 { font-size: 30px; }
+      h2 { margin-top: 30px; }
+      a { color: #1a5daa; }
+      p { line-height: 20px; }
+      li { margin-bottom: 5px; }
+      ul, p { width: 400px; }
+      iframe::-webkit-scrollbar { display: none; }
+    </style>
+
+    <title>Ben Mills - Developer</title>
+  </head>
+  <body>
+    <div id="main">
+    <header>
+      <h1>Ben Mills</h1>
+      <p>I'm a developer living in Chicago and working at Braintree who enjoys building web applications</p> 
+    </header>
+
+    <!--<iframe src="http://www.github.com" width="700px" height="100%"></iframe>-->
+
+    <section id="skills">
+      <h2>Interests</h2>
+      <ul>
+        <li>javascript</li>
+        <li>coffeescript</li>
+        <li>ruby</li>
+        <li>python</li>
+        <li>unix tools</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <ul>
+        <li><a href="https://github.com/benmills/robotskirt">robotskirt</a> - node.js markdown parsing</li>
+        <li><a href="https://github.com/benmills/jquery-stick">jquery-stick</a> - stick DOM elements in place while you scroll</li>
+        <li><a href="https://github.com/benmills/quickdraw">quickdraw</a> - browser picto-chat</li>
+        <li><a href="https://github.com/benmills/scrup-node-receiver">scrup-node-receiver</a> - node.js sever to hold and serve images</li>
+      </ul>   
+    </section>
+ 
+    <section id="links">
+      <h2>Around the Web</h2>
+      <ul>
+        <li>ben@bmdev.org</li>
+        <li>312 613 5619</li>
+        <li><a href="https://github.com/benmills">github</a></li>
+        <li><a href="https://plus.google.com/111792546073961710926">google+</a></li>
+        <li><a href="https://twitter.com/benemills">twitter</a></li>
+      </ul>
+    </section>
+    </div>
+  </body>
+</html>
