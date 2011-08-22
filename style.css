@@ -1,0 +1,71 @@
+@font-face {  
+  font-family: Fanwood;  
+  src: url("Fanwood.otf") format("opentype")
+}  
+@font-face {  
+  font-family: IFanwood;  
+  src: url("Fanwood-Italic.otf") format("opentype")
+}  
+
+body {
+  background: #f1f1f1;
+  font-family: "Fanwood";
+  font-size: 15px;
+}
+
+#main {
+  width: 400px;
+  margin: 35px auto 0 auto;
+}
+
+header {
+  padding: 10px 0 8px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+h1 {
+  text-transform: uppercase;  
+  font-size: 50px;
+  margin: 0; padding: 0;
+  letter-spacing: 2px;
+  line-height: 40px;
+}
+
+header p {
+  color: #a34141;
+  font-family: "IFanwood";
+  margin: 0; padding: 0;
+}
+
+header p a {
+  color: #a34141;
+}
+
+section {
+  margin: 30px 0 0 0;
+}
+
+ul {
+  padding: 3px 0 0 10px; margin: 0;
+  list-style: none;
+  color: #4e4e4e;
+}
+
+#projects ul {
+  font-size: 11px;
+  color: #898888;
+}
+
+ul a {
+  font-size: 14px;
+}
+
+a {
+  color: #4e4e4e;
+}
+
+h2 {
+  padding: 0; margin: 0;
+  text-transform: uppercase;  
+  font-size: 20px;
+}
