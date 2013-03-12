@@ -14,7 +14,7 @@ body {
 }
 
 #main {
-  width: 400px;
+  width: 500px;
   margin: 35px auto 0 auto;
 }
 
@@ -24,7 +24,6 @@ header {
 }
 
 h1 {
-  text-transform: uppercase;
   font-size: 50px;
   margin: 0; padding: 0;
   letter-spacing: 2px;
@@ -51,13 +50,13 @@ ul {
   color: #4e4e4e;
 }
 
-#projects ul, #presentations ul {
-  font-size: 11px;
-  color: #898888;
+li a, li {
+  font-family: courier;
+  font-size: 12px;
 }
 
-ul a {
-  font-size: 14px;
+#projects ul, #presentations ul {
+  color: #898888;
 }
 
 a {
@@ -66,6 +65,10 @@ a {
 
 h2 {
   padding: 0; margin: 0;
-  text-transform: uppercase;
   font-size: 20px;
+  font-weight: 300;
+}
+
+section#gpg {
+  margin-bottom: 20px;
 }
